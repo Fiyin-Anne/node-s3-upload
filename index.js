@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 require('dotenv').config();
 
-app.set('json spaces', 5);
+app.set('json spaces', 5); // to pretify json response
 
 const PORT = process.env.PORT;
 const fileparser = require('./fileparser');

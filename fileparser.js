@@ -27,11 +27,8 @@ const parsefile = async (req) => {
 
         form.on('data', data => {
             if (data.name === "complete") {
-                let statuscode = data.value['$metadata']?.httpStatusCode || 200;
-                resolve({
-                    message: "Successfully uploaded!",
-                    data: data.value
-                })
+                // let statuscode = data.value['$metadata']?.httpStatusCode || 200;
+                resolve(data.value);
             }
         })
 
